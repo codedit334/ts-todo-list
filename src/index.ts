@@ -1,4 +1,4 @@
-// import { v4 as uuidV4 } from 'uuid';
+import { v4 as uuidV4 } from 'uuid';
 
 // console.log(uuidV4())
 
@@ -12,5 +12,10 @@ form?.addEventListener('submit', (e) => {
 
   if(input?.value == '' || input?.value == null) return;
 
-  input.value
+  const task = {
+    id: uuidV4(),
+    title: input.value,
+    completed: false,
+    createdAt: new Date()
+  }
 })
