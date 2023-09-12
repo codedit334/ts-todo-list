@@ -2,6 +2,13 @@ import { v4 as uuidV4 } from 'uuid';
 
 // console.log(uuidV4())
 
+type Task = {
+  id: string;
+  title: string;
+  completed: boolean;
+  createdAt: Date
+}
+
 const list = document.querySelector<HTMLUListElement>('#list');
 const form = document.getElementById('#new-task-form') as HTMLFormElement || null;
 const input = document.querySelector<HTMLInputElement>('#new-task-title');
